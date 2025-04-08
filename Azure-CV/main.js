@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   getVisitCount();
 });
 
-const functionApi = FUNCTION_API;
+const functionApi = process.env.FUNCTION_API_URL;
 
 const getVisitCount = () => {
   fetch(functionApi)
