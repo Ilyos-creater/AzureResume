@@ -6,8 +6,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Fetch the latest count from the Azure Function
   getVisitCount();
 });
+const functionApi = "https://count-test-cv-plus.azurewebsites.net/api/plus-test-cv";
 
-const functionApi = process.env.FUNCTION_API_URL;
+fetch(functionApi)
+  .then(res => res.text())
+  .then(data => {
+    document.querySelector("#visitCount").innerText = data;
+  })
+  .catch(err => {
+    console.error("Fehler beim Abrufen der Besucherzahl:", err);
+  });
+
 
 const getVisitCount = () => {
   fetch(functionApi)
