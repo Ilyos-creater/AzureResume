@@ -1,39 +1,31 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-  // Get the last known count from localStorage (default to 0 if not found)
-  let lastCount = localStorage.getItem("visitCount") || "Loading...";
-  document.getElementById("counter").innerText = lastCount;
+const functionApi = "https://count-test-cv2.azurewebsites.net/api/plus-test-cv";
 
-  // Fetch the latest count from the Azure Function
+window.addEventListener("DOMContentLoaded", () => {
+  // Load from localStorage or show placeholder
+  const lastCount = localStorage.getItem("visitCount") || "Loading...";
+  document.getElementById("visitCount").innerText = lastCount;
+
+  // Fetch new value from API
   getVisitCount();
 });
-const functionApi = "https://count-test-cv-plus.azurewebsites.net/api/plus-test-cv";
-
-fetch(functionApi)
-  .then(res => res.text())
-  .then(data => {
-    document.querySelector("#visitCount").innerText = data;
-  })
-  .catch(err => {
-    console.error("Fehler beim Abrufen der Besucherzahl:", err);
-  });
-
 
 const getVisitCount = () => {
   fetch(functionApi)
-    .then((response) => response.text()) // Fetch response as plain text
+    .then((res) => res.text())
     .then((data) => {
       console.log("Raw response from API:", data);
       const countMatch = data.match(/\d+/);
       const count = countMatch ? parseInt(countMatch[0], 10) : 0;
       console.log("Extracted count:", count);
 
-      // Update the HTML element
-      document.getElementById("counter").innerText = count;
+      // Update counter on page
+      document.getElementById("visitCount").innerText = count;
 
-      // Store the latest count in localStorage
+      // Save to localStorage
       localStorage.setItem("visitCount", count);
     })
-    .catch((error) => {
-      console.error("Error occurred:", error);
+    .catch((err) => {
+      console.error("Fehler beim Abrufen der Besucherzahl:", err);
+      document.getElementById("visitCount").innerText = "Error";
     });
 };
