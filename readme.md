@@ -5,7 +5,7 @@ This project is part of the **Azure Resume Challenge**, designed to showcase clo
 
 ## Features
 - **Static Resume Website** hosted on **Azure Storage (Static Website Hosting)**
-- **Custom Domain** with **Azure CDN** and **HTTPS enabled**
+-  **HTTPS enabled**
 - **Azure Functions** to track visitor count
 - **Cosmos DB** for storing visitor statistics
 - **GitHub Actions** for automated deployments
@@ -41,7 +41,7 @@ func azure functionapp publish <your_function_app>
 - **COSMOS_DB_CONNECTION_STRING**: Connection string for Cosmos DB
 
 ## Live Demo
-Check out the deployed site: [https://your-custom-domain.com](https://your-custom-domain.com) *(Replace with actual link)*
+Check out the deployed site: [https://happy-bush-01f706410.6.azurestaticapps.net/](https://happy-bush-01f706410.6.azurestaticapps.net/) *(Replace with actual link)*
 
 ## Future Improvements
 - Implement user authentication
