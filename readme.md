@@ -42,15 +42,10 @@ func azure functionapp publish <your_function_app>
 
 ## Live Demo
 <<<<<<< HEAD
-Check out the deployed site: [https://happy-bush-01f706410.6.azurestaticapps.net/](https://happy-bush-01f706410.6.azurestaticapps.net/) *(Replace with actual link)*
+Check out the deployed site: [https://happy-bush-01f706410.6.azurestaticapps.net/](https://happy-bush-01f706410.6.azurestaticapps.net/)
 =======
 Check out the deployed site: [[https://happy-bush-01f706410.6.azurestaticapps.net](https://happy-bush-01f706410.6.azurestaticapps.net)]
->>>>>>> c2de58993a9be1ad6fba65e5db5af5847be401b3
 
-## Future Improvements
-- Implement user authentication
-- Add more analytics & logging
-- Enhance website design
 
 ## License
 This project is open-source under the MIT License.
