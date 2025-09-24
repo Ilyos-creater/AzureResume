@@ -41,8 +41,7 @@ func azure functionapp publish <your_function_app>
 - **COSMOS_DB_CONNECTION_STRING**: Connection string for Cosmos DB
 
 ## Live Demo
-Check out the deployed site: [https://happy-bush-01f706410.6.azurestaticapps.net/](https://happy-bush-01f706410.6.azurestaticapps.net/)
-=======
+Check out the deployed site
 Check out the deployed site: [[https://happy-bush-01f706410.6.azurestaticapps.net](https://happy-bush-01f706410.6.azurestaticapps.net)]
 
 
