@@ -40,8 +40,7 @@ func azure functionapp publish <your_function_app>
 - **AZURE_CREDENTIALS**: Service Principal credentials
 - **COSMOS_DB_CONNECTION_STRING**: Connection string for Cosmos DB
 
-## Live Demo
-Check out the deployed site
+## Live Website
 Check out the deployed site: [[https://happy-bush-01f706410.6.azurestaticapps.net](https://happy-bush-01f706410.6.azurestaticapps.net)]
 
 
